@@ -14,6 +14,8 @@ iOS/Swift development reference archiving
   튜토리얼 사이트. 영상 강의 굳. 유료결제
 - [iOS 튜토리얼 사이트](https://www.ioscreator.com/)
 - [iOS Dev 정리](https://github.com/giftbott/iOSDevLinks)
+- [Stanford CS193P iOS 11 Swift 4](https://www.youtube.com/playlist?list=PLPA-ayBrweUzGFmkT_W65z64MoGnKRZMq)
+  SoC Co-op 사전교육 내용 (App life-cycle과 ViewController life-cycle 중심)
 
 
 ### 2021.1.1 Study 시작
