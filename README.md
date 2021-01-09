@@ -79,7 +79,32 @@ Swift Document
     - If statement
     - switch
     - control transfer statements
-    - Functions
+- **Functions**
+    
+```swift
+func greet(person: String) -> String {
+	let greeting = "Hello, "+person+"!"
+	return greeting
+}
+
+func someFunction(argumentLabel parameterName: Int) {
+    // 함수 안애서 parameterName로 argumentLabel의 인자값을 참조할 수 있습니다.
+}
+
+func someFunction(_ firstParameterName: Int, secondParameterName: Int) {
+    // 함수 안에서 firstParameterName, secondParameterName
+    // 인자로 입력받은 첫번째, 두번째 값을 참조합니다.
+}
+
+func swapTwoInts(_ a: inout Int, _ b: inout Int) {
+    let temporaryA = a
+    a = b
+    b = temporaryA
+}
+```
+
+- in-out parameters : c언어의 pointer과 유사
+- Function Types : parameter type, return type으로 구성
 
 **2021.01.07 (Thu)**
 
@@ -97,5 +122,220 @@ Part4: A Second Screen
 - Displaying Multiple Screens
 - App Icon and Display Name
 
+**2021.01.08 (Fri)**
 
+Swift Document
+
+- Closures
+    - Closures : code block으로 lambdas나 object c의 blocks랑 비슷. 상수나 변수의 참조를 capture해 저장 가능
+    - 
+- Enumerations (열거형)
+
+    ```swift
+    enum CompassPoint {
+        case north
+        case south
+        case east
+        case west
+    }
+    var directionToHead = CompassPoint.west
+    directionToHead = .east
+    ```
+
+    - Raw Values
+- Structures and Classes
+    - 
+
+    ```swift
+    class SomeClass {
+        // 클래스 내용은 여기에
+    }
+    struct SomeStructure {
+        // 구조체 내용은 여기에
+    }
+    ```
+
+    - 클래스와 구조체는 많은 측면에서 유사하다.
+    - 클래스/구조체의 차이점
+        - 클래스: 참조타입, 구조체와 열거형은: 값타입
+        - 클래스와 구조체의 선택
+
+- Properties
+    - Stored Properties(저장 프로퍼티)
+
+        lazy stored properties : 값이 처음으로 사용되기 전까지는 계산되지 않는 프로퍼티
+
+    - Computed Properties(계산 프로퍼티)
+
+        get 과 set으로 나타냄
+
+        ```swift
+        struct Rect {
+            var origin = Point()
+            var size = Size()
+            var center: Point {
+                get {
+                    let centerX = origin.x + (size.width / 2)
+                    let centerY = origin.y + (size.height / 2)
+                    return Point(x: centerX, y: centerY)
+                }
+                set(newCenter) { 
+                    origin.x = newCenter.x - (size.width / 2)
+                    origin.y = newCenter.y - (size.height / 2)
+                }
+            }
+        }
+
+        // newCneter라고 인자 설정 안하면 newValue를 사용할 수 있음
+        struct AlternativeRect {
+            var origin = Point()
+            var size = Size()
+            var center: Point {
+                get {
+                    let centerX = origin.x + (size.width / 2)
+                    let centerY = origin.y + (size.height / 2)
+                    return Point(x: centerX, y: centerY)
+                }
+                set {
+                    origin.x = newValue.x - (size.width / 2)
+                    origin.y = newValue.y - (size.height / 2)
+                }
+            }
+
+        //읽기전용 계산된 프로퍼티 : getter만 있고, setter를 제공하지 않는 경우
+        struct Cuboid {
+            var width = 0.0, height = 0.0, depth = 0.0
+            var volume: Double {
+                return width * height * depth
+            }
+        }
+        let fourByFiveByTwo = Cuboid(width: 4.0, height: 5.0, depth: 2.0)
+        print("the volume of fourByFiveByTwo is \(fourByFiveByTwo.volume)")
+        // "the volume of fourByFiveByTwo is 40.0" 출력
+
+        ```
+
+        Property Observers
+
+        - willSet
+        - didSet
+
+        ```swift
+        class StepCounter {
+            var totalSteps: Int = 0 {
+                willSet(newTotalSteps) {
+                    print("About to set totalSteps to \(newTotalSteps)")
+                }
+                didSet {
+                    if totalSteps > oldValue  {
+                        print("Added \(totalSteps - oldValue) steps")
+                    }
+                }
+            }
+        }
+        let stepCounter = StepCounter()
+        stepCounter.totalSteps = 200
+        // About to set totalSteps to 200
+        // Added 200 steps
+        stepCounter.totalSteps = 360
+        // About to set totalSteps to 360
+        // Added 160 steps
+        stepCounter.totalSteps = 896
+        // About to set totalSteps to 896
+        // Added 536 steps
+        ```
+
+        Global and Local Variables
+
+        Type Properties : 특정 인스턴스에 속한 프로퍼티. 모든 인스턴스에 공통으로 사용되는 값을 정의할 때 유용
+
+        - Type Property Syntax - static, class 딱 두개로 타입 프로퍼티 선언 가능
+
+※ Swift는 Multi-paradigm language
+
+OOP 개념에 대해서 [https://www.slideshare.net/plusjune/ss-46109239](https://www.slideshare.net/plusjune/ss-46109239)
+
+- Class, Object, Instance
+- 캡슐화(Encapsulation) : data + operation on data
+- 상속성(Inheritance) : 상속 계층을 따라 특성(data, operation)을 공유
+- 다형성(Polymorphism) : 다양한 형태에 동일한 명령을 사용
+
+**프로그래밍 패러다임**
+
+구조적 프로그래밍 Structured Programming - 기능적 분할, 절차중심
+
+객체지향 프로그래밍 Object Oriented Programming - 객체 간 역할과 관계 중심, 객체중심
+
+명령형 프로그래밍 
+
+선언형 프로그래밍
+
+함수형 프로그래밍
+
+객체기반 프로그래밍
+
+- Methods : class, struct, enum과 관련된 함수들
+    - Instance Methods : 특정 class, struct, enum에 속한 메소드
+
+        self property - 인자 이름이 프로퍼티 이름과 같은 경우 필수로 써주기
+
+        mutating - 기본적으로 인스턴스 메소드 내에서 값 타입의 프로퍼티를 변경 불가. 이럴때 mutating을 쓰면 됨
+
+        mutating 메소드 내에서 self할당
+
+    - Type Methods
+
+    ```swift
+    class SomeClass {
+        class func someTypeMethod() {
+            // 타입 메소드 구현
+        }
+    }
+    SomeClass.someTypeMethod()    // 타입 메소드 호출!
+    ```
+
+    ```swift
+    struct LevelTracker{
+    	static var highestUnlockedLevel = 1
+    	var currentLevel = 1
+
+    	static func unlock(_ level: Int){
+    		if level>highestUnlockedLevel { highestUnlockedLevel = level }
+    	}
+    	static func isUnlocked(_ level: Int) -> Bool{
+    		return (level <= highestUnlockedLevel)
+    	}
+    	
+    	mutating func advance(to level: Int){
+    		if LevelTracker.isunlocked(level){
+    			currentLevel = level
+    			return true
+    		}
+    		else{
+    			return false
+    		}
+    	}
+    }
+
+    class Player{
+    	var tracker = LevelTracker()
+    	let playerName: String
+    	func complete(level: Int){
+    		LevelTracker.unlock(level+1)
+    		tracker.advance(to: level+1)
+    	}
+    	init(name: String){
+    		playerName = name
+    	}
+    }
+
+    var player = Player(name: "Youngjae")
+    player.complete(level: 1)
+    print("highest unlocked level is now \(LevelTracker.highestUnlockedLevel)")
+    if player.tracker.advace(to: 6){
+    	print("player is now on level 6")
+    } else{
+    	print("level 6 has not yey been unlocked")
+    }
+    ```
    
