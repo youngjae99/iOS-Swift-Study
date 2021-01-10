@@ -338,4 +338,85 @@ OOP 개념에 대해서 [https://www.slideshare.net/plusjune/ss-46109239](https:
     	print("level 6 has not yey been unlocked")
     }
     ```
+    
+**2021.01.09 (Sat)**
+
+Swift Document
+
+- Subscripts
+    - assign / retrieve
+
+    ```swift
+    subscript(index: Int) -> Int {
+        get {
+            // 적절한 반환 값
+        }
+        set(newValue) {
+            // 적절한 set 액션
+        }
+    }
+    ```
+
+- Inheritance - class의 특징
+    - Base Class(기반 클래스) - 다른 어떤 클래스도 상속받지 않은 클래스
+    - Subclassing = 상속
+
+    ```swift
+    class SomeSubclass: SomeSuperclass {
+        // subclass definition goes here
+    }
+    ```
+
+    - Overriding : 부모에서 상속받은것을 재정의 하는 것. 인스턴스 메소드, 타입 메소드, 인스턴스 프로퍼티, 타입 프로퍼티, 서브스크립트 모두 가능.
+    - final : 오버라이딩 방지
+- Initialization - 클래스, 구조체, 열거형 인스턴스를 사용하기 위해 준비 작업을 하는 단계
+
+    ```swift
+    init(){
+    // perform some initialization here
+    }
+    ```
+
+    - 내용이 너무 많아서 아직 다 안읽음
+
+- Deinitialization - initializer 직전, 인스턴스가 소멸되기 직전에 호출
+
+    ```swift
+    deinit {
+        // perform the deinitialization
+    }
+    ```
+
+    - 초기화 파라미터
+    - 기본 이니셜라이저
+    
+**2021.01.10 (Sun)**
+
+Swift Document
+
+- Optional Chaining - ?를 붙여서 표현, 강제언래핑 대신에 사용
+
+    ```swift
+    let roomCount = john.residence!.numberOfRooms
+    // 이렇게 강제로 언래핑하면 residence가 nil이기 때문에 오류가 발생함
+
+    if let roomCount = john.residence?.numberOfRooms {
+        print("John's residence has \(roomCount) room(s).")
+    } else {
+        print("Unable to retrieve the number of rooms.")
+    }
+    // Prints "Unable to retrieve the number of rooms."
+    ```
+
+- Error Handling
+    - 에러 발생 함수
+    - do-catch
+    - 옵셔널 이용
+    - 에러 발생 중지
+- Type Casting
+    - 형 확인 : is
+    - Downcasting : as? as!
+    - Any, AnyObject
+- Nested Types
+    - 블랙잭 예시
    
