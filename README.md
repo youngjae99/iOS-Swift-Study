@@ -436,11 +436,6 @@ Stanford CS193P Lecture 9: View Controller Lifecycle and Scroll View
 - awakeFromNib()
 - Summary (19:00)
 
-    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4d60b22d-9e9f-43ed-a8dc-c8e3773ecbbb/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4d60b22d-9e9f-43ed-a8dc-c8e3773ecbbb/Untitled.png)
-
-- Demo
-    - 
-
 Swift Document
 
 - Extensions
