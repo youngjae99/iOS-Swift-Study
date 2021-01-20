@@ -419,4 +419,87 @@ Swift Document
     - Any, AnyObject
 - Nested Types
     - 블랙잭 예시
-   
+    
+**2021.01.11 (Mon)**
+
+Stanford CS193P Lecture 9: View Controller Lifecycle and Scroll View
+
+- View Controllers have a Lifecycle
+    - viewWillAppear - just before your MVC appears (or re-appears) on the screen
+    - viewDidAppear - after MVC has finished appearing on screen
+    - viewWillDisappear - about to go off the screen
+    - viewDidDisappear - MVC went off screen. rarely use
+- Geometry
+    - override func viewWillLayoutSubviews()
+    - override func viewDidLayoutSubviews()
+- Low Memory : override func didReceiveMemoryWarning() 메모리 부속 시 kill
+- awakeFromNib()
+- Summary (19:00)
+
+    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4d60b22d-9e9f-43ed-a8dc-c8e3773ecbbb/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4d60b22d-9e9f-43ed-a8dc-c8e3773ecbbb/Untitled.png)
+
+- Demo
+    - 
+
+Swift Document
+
+- Extensions
+    - 
+
+    ```swift
+    extension Double {
+        var km: Double { return self 1_000.0 }
+        var m: Double { return self }
+        var cm: Double { return self / 100.0 }
+        var mm: Double { return self / 1_000.0 }
+        var ft: Double { return self / 3.28084 }
+    }
+    let oneInch = 25.4.mm
+    print("One inch is \(oneInch) meters")
+    // Prints "One inch is 0.0254 meters"
+    let threeFeet = 3.ft
+    print("Three feet is \(threeFeet) meters")
+    // Prints "Three feet is 0.914399970739201 meters"
+    ```
+
+- Protocols
+
+Raywenderlich
+
+- UIKit Fundamentals
+    - View controller introduction
+    - Interface controls
+    - Build Simple interface
+    - IBAction vs IBOutlet
+        - Interface Builder
+        - IBOutlet
+            - Outlet이란? delegate란?
+    - keyboard and responder chain
+    - Using image with PHPicker (PhotosUI import)
+    - Adding alerts
+
+**2021.01.12 (Tue)**
+
+**2021.01.13 (Wed)**
+
+Raywenderlich
+
+- UIKit Controls
+
+**2021.01.18 (Mon)**
+
+Swift Document
+
+- Generics
+- Automatic Reference Counting
+
+iOS App life-cylce
+
+- App-based life-cycle
+- Scene-based life-cycle
+
+MVC → ViewController Lifecycle
+
+- loadView, viewDidLoad,  viewWillAppear, viewDidAppear, viewWillDisappear, viewDidDisappear, viewDidUnload로 나눌 수 있음
+
+발표 내용 준비
