@@ -498,3 +498,14 @@ MVC → ViewController Lifecycle
 - loadView, viewDidLoad,  viewWillAppear, viewDidAppear, viewWillDisappear, viewDidDisappear, viewDidUnload로 나눌 수 있음
 
 발표 내용 준비
+
+**2021.01.19 (Tue)**
+
+Swift Document
+
+- Memory Safety
+- Access Control
+
+**Co-op 사전교육 App life-cylce & ViewController life-cycle 발표**
+
+[https://docs.google.com/presentation/d/11H1IDPnUkQLXngZ8BSjI_AelEI_tPdlbc0NO3qlHcPE/edit?usp=sharing](https://docs.google.com/presentation/d/11H1IDPnUkQLXngZ8BSjI_AelEI_tPdlbc0NO3qlHcPE/edit?usp=sharing)
