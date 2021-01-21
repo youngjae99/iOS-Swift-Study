@@ -9,14 +9,18 @@ iOS/Swift development reference archiving
 - [iOS Human Interface Guideline](https://developer.apple.com/design/human-interface-guidelines/ios/overview/themes/)
 
 ## Dev 참고 사이트
-
 - [Raywenderlich](https://www.raywenderlich.com/ios/videos)
   튜토리얼 사이트. 영상 강의 굳. 유료결제
 - [iOS 튜토리얼 사이트](https://www.ioscreator.com/)
 - [iOS Dev 정리](https://github.com/giftbott/iOSDevLinks)
 - [Stanford CS193P: Developing Apps for iOS](https://www.youtube.com/playlist?list=PLPA-ayBrweUzGFmkT_W65z64MoGnKRZMq)
   SoC Co-op 사전교육 내용 (App life-cycle과 ViewController life-cycle 중심)
+- [스탠포드 강좌 한국어 버전(edwith)](https://www.edwith.org/swiftapp/joinLectures/13694)
+- [iOS 개발자라면 꼭 해야 하는(알아야 하는) 7가지](https://velog.io/@agiletalk/iOS-%EA%B0%9C%EB%B0%9C%EC%9E%90%EB%9D%BC%EB%A9%B4-%EA%BC%AD-%ED%95%B4%EC%95%BC-%ED%95%98%EB%8A%94%EC%95%8C%EC%95%84%EC%95%BC-%ED%95%98%EB%8A%94-7%EA%B0%80%EC%A7%80)
 
+## iOS/Swift Design
+- [Mobbin](https://mobbin.design/)
+- [pttrns](https://pttrns.com/)
 
 ### 2021.1.1 Study 시작
 2021.03부터 시작할 NAVER maps iOS/Swift 인턴 대비 Swift iOS Study 시작!
