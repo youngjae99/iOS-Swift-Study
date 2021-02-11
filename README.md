@@ -514,8 +514,14 @@ Swift Document
 
 [https://docs.google.com/presentation/d/11H1IDPnUkQLXngZ8BSjI_AelEI_tPdlbc0NO3qlHcPE/edit?usp=sharing](https://docs.google.com/presentation/d/11H1IDPnUkQLXngZ8BSjI_AelEI_tPdlbc0NO3qlHcPE/edit?usp=sharing)
 
+**2021.02.08 (Mon)**
 
+**2021.02.09 (Tue)**
 
 **2021.02.10 (Web)**
 **Co-op 사전교육 Stanford Lecture Review 발표**
 차후 계획 조율
+
+**2021.02.11 (Thu)**
+
+
